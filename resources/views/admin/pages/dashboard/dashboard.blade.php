@@ -6,36 +6,36 @@
 
             <div class="shadow-lg rounded-lg overflow-hidden mx-4 md:mx-10">
 
-              <p>Dashboard testing</p>
-{{--                <table class="w-full table-fixed mb-6">--}}
-{{--                    <thead>--}}
-{{--                        <tr class="bg-purple-600 ">--}}
-{{--                            <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase text-center font-peyda">--}}
-{{--                                ایدی</th>--}}
-{{--                            <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase  text-center ">نام</th>--}}
-{{--                            <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase  text-center">شماره تماس--}}
-{{--                            </th>--}}
-{{--                            <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase text-center">حذف</th>--}}
+                <p>Dashboard testing</p>
+                {{--                <table class="w-full table-fixed mb-6"> --}}
+                {{--                    <thead> --}}
+                {{--                        <tr class="bg-grey-600 "> --}}
+                {{--                            <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase text-center font-peyda"> --}}
+                {{--                                ایدی</th> --}}
+                {{--                            <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase  text-center ">نام</th> --}}
+                {{--                            <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase  text-center">شماره تماس --}}
+                {{--                            </th> --}}
+                {{--                            <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase text-center">حذف</th> --}}
 
-{{--                        </tr>--}}
-{{--                    </thead>--}}
-{{--                    <tbody class="bg-white">--}}
-{{--                    --}}
-{{--                            <tr>--}}
-{{--                                <td class="py-4 px-6 border-b border-gray-200 text-center"></td>--}}
-{{--                                <td class="py-4 px-6 border-b border-gray-200 truncate text-center"></td>--}}
-{{--                                <td class="py-4 px-6 border-b border-gray-200 text-center"></td>--}}
-{{--                                <td class="py-4 px-6 border-b border-gray-200 text-center">--}}
-{{--                           --}}
-{{--                                </td>--}}
+                {{--                        </tr> --}}
+                {{--                    </thead> --}}
+                {{--                    <tbody class="bg-white"> --}}
+                {{--                    --}}
+                {{--                            <tr> --}}
+                {{--                                <td class="py-4 px-6 border-b border-gray-200 text-center"></td> --}}
+                {{--                                <td class="py-4 px-6 border-b border-gray-200 truncate text-center"></td> --}}
+                {{--                                <td class="py-4 px-6 border-b border-gray-200 text-center"></td> --}}
+                {{--                                <td class="py-4 px-6 border-b border-gray-200 text-center"> --}}
+                {{--                           --}}
+                {{--                                </td> --}}
 
-{{--                            </tr>--}}
-{{--                        --}}
+                {{--                            </tr> --}}
+                {{--                        --}}
 
 
-{{--                        <!-- Add more rows here -->--}}
-{{--                    </tbody>--}}
-{{--                </table>--}}
+                {{--                        <!-- Add more rows here --> --}}
+                {{--                    </tbody> --}}
+                {{--                </table> --}}
             </div>
             <!-- Cards with title -->
             <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
@@ -53,7 +53,7 @@
                         nihil dolorum.
                     </p>
                 </div>
-                <div class="min-w-0 p-4 text-white bg-purple-600 rounded-lg shadow-xs">
+                <div class="min-w-0 p-4 text-white bg-grey-600 rounded-lg shadow-xs">
                     <h4 class="mb-4 font-semibold">
                         Colored card
                     </h4>
@@ -67,6 +67,4 @@
             </div>
         </main>
     </div>
-
 @endsection
-

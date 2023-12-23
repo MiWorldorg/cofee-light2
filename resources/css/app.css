@@ -1,4 +1,7 @@
+
+
+@import url('peyda_font.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('/public/admin-asset/css/peyda_font.css');
