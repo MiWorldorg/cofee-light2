@@ -10,8 +10,8 @@ class AdminOrderController extends Controller
 {
     public function index()
     {
-        $orders=Order::all(['id','status','user_id','total_price']);
-        return view("admin.pages.order.index",compact("orders"));
+        $orders = Order::all(['id', 'status', 'user_id', 'total_price']);
+        return view("admin.pages.order.index", compact("orders"));
     }
     public function destroy(Order $order)
     {
@@ -23,13 +23,13 @@ class AdminOrderController extends Controller
     public function changeStatus(Order $order)
     {
 
-        if ($order['status']==0){
-            $order['status']=1;
+        if ($order['status'] == 0) {
+            $order['status'] = 1;
             $order->save();
             return redirect()->back();
 
-        }else{
-            $order['status']=0;
+        } else {
+            $order['status'] = 0;
             $order->save();
             return redirect()->back();
 
