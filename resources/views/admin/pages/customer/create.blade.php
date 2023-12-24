@@ -3,7 +3,7 @@
 @section('main')
     <div class="flex flex-col flex-1 py-4">
         <main class="h-full pb-16 overflow-y-auto p-50">
-
+           
             <div class="shadow-lg rounded-lg overflow-hidden mx-4 md:mx-10">
                 <table class="w-full table-fixed mb-6">
                     <thead>
