@@ -71,6 +71,12 @@ Route::prefix("admin")->group(function () {
         Route::put('/update/{sales}', [AdminSalesController::class, 'update'])->name('admin.sales.update');
         Route::delete('/destroy/{sales}', [AdminSalesController::class, 'destroy'])->name('admin.sales.destroy');
     });
+
+
+    //admin-analitics
+    Route::prefix('analitics')->group(function () {
+        Route::get('/', [AdminCustomerController::class, 'index'])->name('admin.analytic.index');
+    });
 });
 
 Auth::routes();
