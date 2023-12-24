@@ -9,10 +9,9 @@
                     <li class="relative px-6 py-3">
                         <a class="inline-flex items-center w-full text-sm font-black text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-amber-500 dark:text-gray-100"
                             href="{{ route('admin.dashboard') }}">
-                            <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg class="w-10 h-10 text-amber-50">
                                 <path
-                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                                    d="M23.121,9.069,15.536,1.483a5.008,5.008,0,0,0-7.072,0L.879,9.069A2.978,2.978,0,0,0,0,11.19v9.817a3,3,0,0,0,3,3H21a3,3,0,0,0,3-3V11.19A2.978,2.978,0,0,0,23.121,9.069ZM15,22.007H9V18.073a3,3,0,0,1,6,0Zm7-1a1,1,0,0,1-1,1H17V18.073a5,5,0,0,0-10,0v3.934H3a1,1,0,0,1-1-1V11.19a1.008,1.008,0,0,1,.293-.707L9.878,2.9a3.008,3.008,0,0,1,4.244,0l7.585,7.586A1.008,1.008,0,0,1,22,11.19Z">
                                 </path>
                             </svg>
                             <span class="ml-4 px-2">داشبورد</span>
@@ -20,18 +19,18 @@
                     </li>
                 </ul>
 
-{{--                @can("isAdmin")--}}
+                {{--                @can('isAdmin') --}}
                 <ul>
                     {{--   Users --}}
                     <li class="relative px-6 py-3">
 
                         <a class="inline-flex items-center w-full text-sm font-normal font-peyda transition-colors duration-150 hover:text-gray-800 dark:hover:text-amber-500"
                             href="{{ route('admin.user.index') }}">
-                            <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg class="w-10 h-10 text-amber-50 viewBox="0 0 24 24">
                                 <path
-                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
-                                </path>
+                                    d="M12,12A6,6,0,1,0,6,6,6.006,6.006,0,0,0,12,12ZM12,2A4,4,0,1,1,8,6,4,4,0,0,1,12,2Z" />
+                                <path
+                                    d="M12,14a9.01,9.01,0,0,0-9,9,1,1,0,0,0,2,0,7,7,0,0,1,14,0,1,1,0,0,0,2,0A9.01,9.01,0,0,0,12,14Z" />
                             </svg>
                             <span class="ml-4 px-2">کاربران</span>
                         </a>
@@ -99,22 +98,22 @@
                     </li>
 
                 </ul>
-{{--                @endcan--}}
-{{--                @can("isCook")--}}
-{{--                    <li class="relative px-6 py-3">--}}
+                {{--                @endcan --}}
+                {{--                @can('isCook') --}}
+                {{--                    <li class="relative px-6 py-3"> --}}
 
-{{--                        <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-amber-500"--}}
-{{--                           href="{{ route('admin.order.index') }}">--}}
-{{--                            <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"--}}
-{{--                                 stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">--}}
-{{--                                <path--}}
-{{--                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">--}}
-{{--                                </path>--}}
-{{--                            </svg>--}}
-{{--                            <span class="ml-4 px-2">سفارشات</span>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-{{--                @endcan--}}
+                {{--                        <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-amber-500" --}}
+                {{--                           href="{{ route('admin.order.index') }}"> --}}
+                {{--                            <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" --}}
+                {{--                                 stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"> --}}
+                {{--                                <path --}}
+                {{--                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"> --}}
+                {{--                                </path> --}}
+                {{--                            </svg> --}}
+                {{--                            <span class="ml-4 px-2">سفارشات</span> --}}
+                {{--                        </a> --}}
+                {{--                    </li> --}}
+                {{--                @endcan --}}
             </div>
         </aside>
         <!-- Mobile sidebar -->
