@@ -71,3 +71,7 @@ Route::prefix("admin")->group(function () {
         Route::delete('/destroy/{sales}', [AdminSalesController::class, 'destroy'])->name('admin.sales.destroy');
     });
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
