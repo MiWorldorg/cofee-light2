@@ -9,7 +9,7 @@ class AdminOrderController extends Controller
 {
     public function index()
     {
-        $orders = Order::all(['id', 'status', 'user_id', 'total_price']);
+        $orders = Order::all(['id', 'status', 'user_id', 'total_price','created_at']);
         return view("admin.pages.order.index", compact("orders"));
     }
 

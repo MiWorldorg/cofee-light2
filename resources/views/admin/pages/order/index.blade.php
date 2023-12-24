@@ -90,7 +90,7 @@
                             </td>
                             <td class="px-4 py-3 text-sm text-slate-100">
 
-                                <p> {{ $order->user->type }}</p>
+                                <p> {{ jdate($order->created_at)  }}</p>
                             </td>
                         </tr>
 

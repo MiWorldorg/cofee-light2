@@ -3,11 +3,11 @@
 @section('main')
     <div class="flex flex-col flex-1 py-4  pt-10">
         <h1 class="font-black text-4xl dark:text-amber-200">
-            لیست حراجی ها
+            لیست   فروش
         </h1>
         <main class="h-full pb-16 overflow-y-auto p-50  pt-10">
-
             <div class="shadow-lg rounded-lg overflow-hidden mx-4 md:mx-10">
+
                 <table class="w-full table-fixed mb-6">
                     <thead>
                     <tr class="bg-grey-600 ">
@@ -15,7 +15,7 @@
                             ایدی</th>
                         <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase  text-center ">      کد محصول     </th>
                         <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase  text-center ">   تعداد     </th>
-                        <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase  text-center">   تاریخ حراجی
+                        <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase  text-center">   تاریخ فروش
                         </th>
                         <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase text-center">حذف</th>
 
@@ -28,7 +28,7 @@
                             <td class="py-4 px-6 border-b border-amber-200 truncate text-center">{{ $sale->order_id }}
                             </td>
                             <td class="py-4 px-6 border-b border-amber-200 text-center">{{ $sale->amount }}</td>
-                            <td class="py-4 px-6 border-b border-amber-200 text-center">{{ $sale->sale_date }}</td>
+                            <td class="py-4 px-6 border-b border-amber-200 text-center">{{ jdate($sale->sale_date) }}</td>
                             <td class="py-4 px-6 border-b border-amber-200 text-center">
                                 <form id="deleteButton" class=""
                                       action="{{ route('admin.sales.destroy', $sale->id) }}" method="POST">

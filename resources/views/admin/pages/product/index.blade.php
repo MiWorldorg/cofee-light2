@@ -54,7 +54,7 @@
                 @foreach ($products as $product)
                     <div
                         class="rounded overflow-hidden shadow-lg  transition-all bg-slate-800 rounded-2xl p-6 hover:bg-gradient-to-tl from-slate-600 transition-opacity hover:border-solid hover:border-t-4 hover:border-amber-300 ">
-                        <img class="max-w-80 maxh-80 rounded-xl shadow-lg" src="{{ asset($product->image_location)  }}"
+                        <img class="max-w-80 maxh-80 rounded-xl shadow-lg" src="{{ $product->image_location  }}"
                             alt=" {{ $product->name }}">
                         <div class="px-6 py-4 pt-6">
                             <div class="font-bold text-xl mb-2">{{ $product->id }}</div>

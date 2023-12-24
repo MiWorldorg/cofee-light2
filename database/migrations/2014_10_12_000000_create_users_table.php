@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('password');
             $table->string('phone_number')->uniqid();
-            $table->tinyInteger('type')->default(0);
+            $table->string('type')->default("user");
             $table->rememberToken();
             $table->timestamps();
         });
