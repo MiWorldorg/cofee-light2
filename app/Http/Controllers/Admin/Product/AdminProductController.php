@@ -24,28 +24,26 @@ class AdminProductController extends Controller
 
     public function store(Request $request, Product $product)
     {
-        $inputs=$request->validate([
+        $inputs = $request->validate([
             'name' => 'required',
             'description' => 'required',
             'price' => 'required',
-            'image_location' => 'required|max:10000',
+            'image_location' => 'required',
         ]);
 
-        if($request->hasFile('image_location')) {
+        if ($request->hasFile('image_location')) {
             if (!empty($product->image_location)) {
                 file("$product->image_location")->delete();
             }
             $file = $request->file('image_location');
-            $filename = time().'_'.$file->getClientOriginalName();
+            $filename = time() . '_' . $file->getClientOriginalName();
             // File upload location
             $location = 'uploads/product/';
             // Upload file
-            $file->move($location,$filename);
-            $inputs['image_location']="http://127.0.0.1:8000/uploads/product/".$filename;
+            $file->move($location, $filename);
+            $inputs['image_location'] = "http://127.0.0.1:8000/uploads/product/" . $filename;
 
-        }
-        else
-        {
+        } else {
             if (isset($inputs['currentImage']) && !empty($product->image_location)) {
                 $image = $product->image_location;
                 $image['currentImage'] = $inputs['currentImage'];
