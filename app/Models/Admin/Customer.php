@@ -1,24 +1,23 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Admin;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Order extends Model
+class Customer extends Model
 {
     use HasFactory;
 
-
     protected $fillable=[
-        'status',
         'user_id',
-        'total_price'
+        'total_spent',
+        'loyaly_points'
     ];
 
     public function user()
     {
         return $this->belongsTo(User::class);
     }
-
 }

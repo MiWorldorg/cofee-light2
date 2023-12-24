@@ -15,8 +15,8 @@ return new class extends Migration {
             $table->string("name");
             $table->longText('description')->nullable()->default('توضیحات اولیه');
             $table->bigInteger('price')->nullable()->default(0);
-            $table->timestamps();
             $table->string('image_location')->nullable();
+            $table->timestamps();
         });
     }
 

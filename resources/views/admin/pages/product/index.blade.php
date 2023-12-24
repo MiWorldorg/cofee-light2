@@ -5,6 +5,12 @@
         <main class="h-full pb-16 overflow-y-auto p-50">
 
             <div class="shadow-lg rounded-lg overflow-hidden mx-4 md:mx-10">
+                <h1 class="font-black text-4xl pt-2 dark:text-amber-200">
+                    لیست محصولات
+                </h1>
+                <button class="text-green-50 border-y-green-500">
+                    <a class="text-green-50 border-y-green-500" href="{{route("admin.product.create")}}">اضافه کردن محصول</a>
+                </button>
                 <table class="w-full table-fixed mb-6">
                     <thead>
                         <tr class="bg-grey-600 ">
@@ -48,11 +54,11 @@
                 @foreach ($products as $product)
                     <div
                         class="rounded overflow-hidden shadow-lg  transition-all bg-slate-800 rounded-2xl p-6 hover:bg-gradient-to-tl from-slate-600 transition-opacity hover:border-solid hover:border-t-4 hover:border-amber-300 ">
-                        <img class="max-w-80 maxh-80 rounded-xl shadow-lg" src="{{ $product->image_location }}"
+                        <img class="max-w-80 maxh-80 rounded-xl shadow-lg" src="{{ asset($product->image_location)  }}"
                             alt=" {{ $product->name }}">
                         <div class="px-6 py-4 pt-6">
                             <div class="font-bold text-xl mb-2">{{ $product->id }}</div>
-                            <div class="font-bold text-xl mb-2  text-amber-600"">{{ $product->name }}</div>
+                            <div class="font-bold text-xl mb-2  text-amber-600">{{ $product->name }}</div>
 
                             <h4 class="text-slate-200 text-base">
                                 {{ Illuminate\Support\Str::limit($product->description, 30, ' ...') }}
@@ -79,11 +85,8 @@
 
                     </div>
                 @endforeach
-
-
             </div>
+        </main>
     </div>
-    </div>
-    </main>
-    </div>
+
 @endsection

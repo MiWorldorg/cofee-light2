@@ -3,8 +3,7 @@
 namespace App\Http\Controllers\Admin\Order;
 
 use App\Http\Controllers\Controller;
-use App\Models\Order;
-use Illuminate\Http\Request;
+use App\Models\Admin\Order;
 
 class AdminOrderController extends Controller
 {
@@ -13,6 +12,8 @@ class AdminOrderController extends Controller
         $orders = Order::all(['id', 'status', 'user_id', 'total_price']);
         return view("admin.pages.order.index", compact("orders"));
     }
+
+
     public function destroy(Order $order)
     {
         $order->delete();
