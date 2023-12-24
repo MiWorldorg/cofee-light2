@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\Order\AdminOrderController;
 use App\Http\Controllers\Admin\Product\AdminProductController;
 use App\Http\Controllers\Admin\Customer\AdminCustomerController;
 use App\Http\Controllers\Admin\Sales\AdminSalesController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*

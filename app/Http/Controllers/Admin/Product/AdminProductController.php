@@ -56,6 +56,46 @@ class AdminProductController extends Controller
     }
 
 
+    public function edit(Product $product)
+    {
+        return view("admin.pages.product.update",compact("product"));
+    }
+
+    public function update(Request $request,Product $product)
+    {
+        $input=$request->all();
+
+        $inputs = $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'price' => 'required',
+
+        ]);
+
+
+        if($request->hasFile('image_location')) {
+            $file = $request->file('image_location');
+            $filename = time().'_'.$file->getClientOriginalName();
+
+            // File upload location
+            $location = 'uploads/product/';
+
+            // Upload file
+            $file->move($location,$filename);
+            $input['image_location']="http://127.0.0.1:8000/uploads/product/".$filename;
+        }
+
+        $product->update($input);
+        return redirect()->route('admin.product.index');
+
+
+
+
+
+
+
+
+    }
 
 
     public function destroy(Product $product)
