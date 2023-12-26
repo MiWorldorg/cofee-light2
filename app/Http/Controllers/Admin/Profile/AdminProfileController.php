@@ -10,8 +10,8 @@ class AdminProfileController extends Controller
 {
     public function index()
     {
-        $profile = User::all(['id', 'order_id', 'amount', 'sale_date']);
-        return view("admin.page.index", compact("profile"));
+
+        return view("admin.page.index");
     }
 
 }
