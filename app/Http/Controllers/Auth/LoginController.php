@@ -28,7 +28,7 @@ class LoginController extends Controller
         if ($user && Auth::attempt(['phone_number' => $request->phone_number, 'password' => $request->password])) {
 
 
-            return redirect()->back();
+            return to_route("admin.dashboard");
 
         }else{
 
