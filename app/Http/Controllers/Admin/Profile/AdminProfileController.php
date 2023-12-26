@@ -37,8 +37,7 @@ class AdminProfileController extends Controller
             return to_route("admin.profile.index")->with('message','اطلاعات کاربر با موفقیت تغیر کرد');
 
         }else{
-            return to_route("admin.profile.index")->with('message','مشکلی به وجود امد');
-        }
+            return to_route("admin.profile.index")->with('message','مشکلی به وجود امده دباره تلاش کنید');        }
     }
 
 }
