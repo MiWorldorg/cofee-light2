@@ -1,12 +1,14 @@
 <?php
 
 use App\Http\Controllers\Admin\Dashboard\AdminDashboardController;
+use App\Http\Controllers\Admin\Profile\AdminProfileController;
 use App\Http\Controllers\Admin\User\AdminUserController;
 use App\Http\Controllers\Admin\Order\AdminOrderController;
 use App\Http\Controllers\Admin\Product\AdminProductController;
 use App\Http\Controllers\Admin\Customer\AdminCustomerController;
 use App\Http\Controllers\Admin\Sales\AdminSalesController;
 
+use App\Http\Controllers\Admin\Analytic\AdminAnalyticController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -73,9 +75,17 @@ Route::prefix("admin")->middleware(["auth","admin"])->group(function () {
     });
 
 
-    //admin-analitics
-    Route::prefix('analitics')->group(function () {
-        Route::get('/', [AdminCustomerController::class, 'index'])->name('admin.analytic.index');
+    //admin-analytics
+    Route::prefix('analytics')->group(function () {
+        Route::get('/', [AdminAnalyticController::class, 'index'])->name('admin.analytic.index');
+    });
+
+    //admin-profile
+    Route::prefix('profile')->group(function () {
+        Route::get('/', [AdminProfileController::class, 'index'])->name('admin.profile.index');
+        Route::get('/edit/{user}', [AdminProfileController::class, 'edit'])->name('admin.profile.edit');
+        Route::put('/update/{user}', [AdminProfileController::class, 'update'])->name('admin.profile.update');
+
     });
 });
 
