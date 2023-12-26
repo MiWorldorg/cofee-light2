@@ -1,5 +1,16 @@
 const fetchSalesData = () => {
     try {
+
+        //Jdate
+        // const shamsiDatesWithTime = saleDates.map(gregorianDate => {
+        //     const [datePart, timePart] = gregorianDate.split(' '); // Split date and time
+        //     const [year, month, day] = datePart.split('-').map(Number);
+        //     const [hour, minute, second] = timePart.split(':').map(Number);
+        //     const shamsiDate = new JDate([year, month, day]);
+        //     return `${shamsiDate.format('YYYY-MM-DD')} ${hour}:${minute}:${second}`; // Format as '1399-10-05 12:30:45'
+        //   });
+
+
       // Use the amounts and saleDates variables passed from the Blade view
       lineConfig.data.labels = saleDates;
       lineConfig.data.datasets[0].data = amounts;

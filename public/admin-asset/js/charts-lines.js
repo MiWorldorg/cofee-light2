@@ -5,7 +5,7 @@ const lineConfig = {
       labels: [], // Will be populated dynamically
       datasets: [
         {
-          label: 'Sales Amount',
+          label: 'مجموع فروش',
           data: [], // Will be populated dynamically
           backgroundColor: 'rgba(75, 192, 192, 0.2)',
           borderColor: 'rgba(75, 192, 192, 1)',

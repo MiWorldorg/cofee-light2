@@ -4,7 +4,7 @@ const barConfig = {
       labels: [], // Will be populated dynamically
       datasets: [
         {
-          label: 'Sales Amount',
+          label: 'مجموع فروش',
           data: [], // Will be populated dynamically
           backgroundColor: 'rgba(255, 99, 132, 0.2)',
           borderColor: 'rgba(255, 99, 132, 1)',

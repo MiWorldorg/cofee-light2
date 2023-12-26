@@ -30,7 +30,6 @@ class AdminAnalyticController extends Controller
     public function getSalesData()
     {
         $sales = Sales::select('amount', 'sale_date')->get(); // Fetch both amount and sale_date
-
         $amounts = $sales->pluck('amount')->toArray(); // Extract amounts
         $saleDates = $sales->pluck('sale_date')->toArray(); // Extract sale_dates
 

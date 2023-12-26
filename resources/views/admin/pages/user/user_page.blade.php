@@ -6,20 +6,22 @@
             لیست کاربران
         </h1>
         <main class="h-full pb-16 overflow-y-auto p-50  pt-10">
-            <div class="shadow-lg rounded-lg overflow-hidden mx-4 md:mx-10">
-                <table class="w-full table-fixed mb-6">
+            <div
+                class="shadow-lg rounded-lg overflow-hidden mx-4 md:mx-10
+                          border-x-2 transition-all border-amber-200 border-opacity-0  hover:border-opacity-100 min-w-0 p-4 shadow-xs bg-gray-800 bg-opacity-30 backdrop-blur-sm">
+                <table class="w-full table-fixed mb-6 ">
                     <thead>
-                        <tr class="bg-grey-600 ">
+                        <tr>
                             <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase text-center font-peyda">
                                 ایدی</th>
                             <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase  text-center ">نام</th>
                             <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase  text-center">شماره تماس
                             </th>
-                            <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase text-center">حذف</th>
+                            <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase text-center"></th>
 
                         </tr>
                     </thead>
-                    <tbody class="bg-slate-700 text-amber-200">
+                    <tbody class="bg-gray-800 text-amber-200">
                         @foreach ($users as $user)
                             <tr>
                                 <td class="py-4 px-6 border-b border-amber-200 text-center">{{ $user->id }}</td>
