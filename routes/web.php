@@ -73,6 +73,7 @@ Route::prefix("admin")->group(function () {
         Route::get('/edit/{sales}', [AdminSalesController::class, 'edit'])->name('admin.sales.edit');
         Route::put('/update/{sales}', [AdminSalesController::class, 'update'])->name('admin.sales.update');
         Route::delete('/destroy/{sales}', [AdminSalesController::class, 'destroy'])->name('admin.sales.destroy');
+        Route::get('/get-sales-data', [AdminSalesController::class, 'getSalesData']);
     });
 
 
@@ -88,6 +89,10 @@ Route::prefix("admin")->group(function () {
         Route::put('/update/{user}', [AdminProfileController::class, 'update'])->name('admin.profile.update');
 
     });
+
+
+
+
 });
 
 
