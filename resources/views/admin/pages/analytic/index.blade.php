@@ -1,5 +1,16 @@
 @extends('admin.layouts.master')
 
+@section('script')
+    <script>
+        const amounts = @json($amounts);
+        const saleDates = @json($saleDates);
+    </script>
+    <script src="public\admin-asset\js\charts-bars.js"></script>
+    <script src="public\admin-asset\js\charts-lines.js"></script>
+    <script src="public\admin-asset\js\charts-fetch.js"></script>
+@endsection
+
+
 @section('main')
     <div class="flex flex-col flex-1 py-4  pt-10">
         <h1 class="font-black text-4xl dark:text-amber-200">
@@ -43,7 +54,7 @@
                     <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
                         نمودار تنوع اجناس
                     </h4>
-                    <canvas id="line-chart"></canvas>
+                    <canvas id="bar"></canvas>
                     <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
                         <!-- Chart legend -->
 
@@ -67,15 +78,4 @@
         </main>
     </div>
     </div>
-@endsection
-
-
-
-
-@section('script')
-    <script>
-        const amounts = @json($amounts);
-        const saleDates = @json($saleDates);
-    </script>
-    <script src="admin-asset/js/charts-lines.js"></script>
 @endsection

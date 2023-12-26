@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="{{ asset('admin-asset/js/init-alpine.js') }}" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" defer></script>
-<script src="{{ asset('admin-asset/js/charts-pie.js') }}" defer></script>
 <script src="{{ asset('admin-asset/js/charts-lines.js') }}" defer></script>
+<script src="{{ asset('admin-asset/js/charts-bars.js') }}" defer></script>
+<script src="{{ asset('admin-asset/js/charts-fetch.js') }}" defer></script>
 <script src="{{ asset('admin-asset/sweetalert/sweetalert2.all.min.js') }}"></script>
 <script src="{{ asset('admin-asset/sweetalert/sweetalert2.min.js') }}"></script>
-

@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 */
 //->middleware(["auth","admin"])
 
-Route::prefix("admin")->middleware(["auth","admin"])->group(function () {
+Route::prefix("admin")->group(function () {
 
     //admin-dashboard
 

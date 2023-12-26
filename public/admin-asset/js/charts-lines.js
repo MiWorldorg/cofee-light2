@@ -36,28 +36,28 @@ const lineConfig = {
     },
   };
 
-  // Define the fetchSalesData function to update the chart data
-  const fetchSalesData = () => {
-    try {
-      // Use the amounts and saleDates variables passed from the Blade view
-      lineConfig.data.labels = saleDates;
-      lineConfig.data.datasets[0].data = amounts;
+//   // Define the fetchSalesData function to update the chart data
+//   const fetchSalesData = () => {
+//     try {
+//       // Use the amounts and saleDates variables passed from the Blade view
+//       lineConfig.data.labels = saleDates;
+//       lineConfig.data.datasets[0].data = amounts;
 
-      // Get the canvas element for the chart
-      const lineCtx = document.getElementById('line');
+//       // Get the canvas element for the chart
+//       const lineCtx = document.getElementById('line');
 
-      // Initialize or update the chart with the new data
-      if (window.myLine) {
-        window.myLine.data.labels = lineConfig.data.labels;
-        window.myLine.data.datasets[0].data = lineConfig.data.datasets[0].data;
-        window.myLine.update();
-      } else {
-        window.myLine = new Chart(lineCtx, lineConfig);
-      }
-    } catch (error) {
-      console.error('Error fetching sales data:', error);
-    }
-  };
+//       // Initialize or update the chart with the new data
+//       if (window.myLine) {
+//         window.myLine.data.labels = lineConfig.data.labels;
+//         window.myLine.data.datasets[0].data = lineConfig.data.datasets[0].data;
+//         window.myLine.update();
+//       } else {
+//         window.myLine = new Chart(lineCtx, lineConfig);
+//       }
+//     } catch (error) {
+//       console.error('Error fetching sales data:', error);
+//     }
+//   };
 
-  // Execute the fetchSalesData function when the script is loaded
-  fetchSalesData();
+//   // Execute the fetchSalesData function when the script is loaded
+//   fetchSalesData();
