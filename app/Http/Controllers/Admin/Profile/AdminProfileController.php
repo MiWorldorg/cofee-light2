@@ -10,8 +10,7 @@ class AdminProfileController extends Controller
 {
     public function index()
     {
-
-        return view("admin.page.index");
+        return view("admin.pages.profile.index");
     }
 
 }
