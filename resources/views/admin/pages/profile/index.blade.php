@@ -15,14 +15,14 @@
                 class="w-full border-b-0 bg-gray-800 bg-opacity-20 backdrop-blur-sm overflow-hidden sm:rounded-lg mt-8 pt-8 lg:rounded-3xl shadow-xl flex items-center justify-center">
                 <div class="flex flex-col items-center border-x-2">
                     <dl class="p-4">
-                        <a href="">
-                            <button type="submit"
+                        <a href="{{ route('admin.profile.edit', auth()->user()->id) }}">
+                            <button
                                 class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">ویرایش</button>
                         </a>
                     </dl>
                     <dl class="p-4">
-                        <a href="">
-                            <button type="submit"
+                        <a href="{{route("logOut")}}">
+                            <button
                                 class="text-white bg-gradient-to-r from-red-500 via-red-600 to-red-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">خروج</button>
                         </a>
                     </dl>
@@ -49,7 +49,7 @@
                                 شناسه شما
                             </dt>
                             <dd class="mb-2 mt-1 text-md text-amber-100 sm:mt-0 sm:col-span-2">
-                                110
+                                {{auth()->user()->id}}
                             </dd>
                         </div>
                     </dl>
@@ -60,7 +60,7 @@
                                 نام کاربری
                             </dt>
                             <dd class="mb-2 mt-1 text-md text-amber-100 sm:mt-0 sm:col-span-2">
-                                Mahdiizadi
+                                {{auth()->user()->name}}
                             </dd>
                         </div>
                     </dl>
@@ -71,7 +71,7 @@
                                 سطح دسترسی
                             </dt>
                             <dd class="mb-2 mt-1 text-md text-amber-100 sm:mt-0 sm:col-span-2">
-                                مهدی ایزدی
+                                {{auth()->user()->type}}
                             </dd>
                         </div>
                     </dl>
@@ -82,7 +82,7 @@
                                 نام کامل
                             </dt>
                             <dd class="mb-2 mt-1 text-md text-amber-100 sm:mt-0 sm:col-span-2">
-                                مهدی ایزدی
+                                {{auth()->user()->username}}
                             </dd>
                         </div>
                     </dl>
