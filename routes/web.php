@@ -6,7 +6,7 @@ use App\Http\Controllers\Admin\Order\AdminOrderController;
 use App\Http\Controllers\Admin\Product\AdminProductController;
 use App\Http\Controllers\Admin\Customer\AdminCustomerController;
 use App\Http\Controllers\Admin\Sales\AdminSalesController;
-use Illuminate\Support\Facades\Auth;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix("admin")->group(function () {
+Route::prefix("admin")->middleware("admin")->group(function () {
 
     //admin-dashboard
 
@@ -79,6 +79,9 @@ Route::prefix("admin")->group(function () {
     });
 });
 
-Auth::routes();
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+require __DIR__.'/auth.php';
