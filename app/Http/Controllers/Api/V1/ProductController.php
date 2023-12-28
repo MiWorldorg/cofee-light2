@@ -14,7 +14,7 @@ class ProductController extends Controller
             'result'=>true,
             'message'=>'product  page',
             'data'=>[
-                Product::all("name","description","price","image_location")
+                Product::all("id","name","description","price","image_location")
             ]
         ],200);
     }
