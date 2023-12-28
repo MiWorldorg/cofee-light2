@@ -16,7 +16,6 @@ class ProductController extends Controller
             'data'=>[
                 Product::all("name","description","price","image_location")
             ]
-
         ],200);
     }
 }
