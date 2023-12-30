@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\V1\AuthApiController;
 use App\Http\Controllers\Api\V1\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -23,4 +24,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::prefix("v1")->group(function (){
     Route::get("/product",[ProductController::class,"index"]);
 
+    //
+    Route::post('send_sms',[AuthApiController::class, 'sendSms']);
+    Route::post('verify_sms_code',[AuthApiController::class, 'verifySms']);
 });
