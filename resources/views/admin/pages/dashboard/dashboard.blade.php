@@ -23,7 +23,7 @@
                             تعداد مشتریان
                         </p>
                         <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                            6389
+                            {{$customer->count()}}
                         </p>
                     </div>
                 </div>
@@ -41,7 +41,8 @@
                             مجموع قیمت فروش
                         </p>
                         <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                            $ 46,760.89
+                            {{$sales->count()}}
+
                         </p>
                     </div>
                 </div>
@@ -59,7 +60,8 @@
                             تعداد فروش
                         </p>
                         <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                            376
+                            {{$sales->count()}}
+
                         </p>
                     </div>
                 </div>
@@ -77,7 +79,8 @@
                             تنوع محصول
                         </p>
                         <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                            35
+                            {{$product->count()}}
+
                         </p>
                     </div>
                 </div>
