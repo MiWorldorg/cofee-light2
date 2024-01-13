@@ -13,7 +13,7 @@ class AdminDashboardController extends Controller
     {
         $customer=Customer::all();
         $sales=Sales::all();
-        $salesAmount=Sales::all("amount");
+        $salesAmount=Sales::all("amount")->sum("amount");
         $customer=Customer::all();
         $product=Product::all();
         return view("admin.pages.dashboard.dashboard",compact("product","customer","sales","salesAmount"));
