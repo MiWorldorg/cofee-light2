@@ -1,13 +1,16 @@
 @extends('admin.layouts.master')
 
+
+
+
 @section('main')
-    <div class="flex flex-col flex-1 py-4">
-        <main class="h-full pb-16 overflow-y-auto p-50">
+    <div class="w-full mb-8 overflow-hidden rounded-2xl shadow-xs pt-10">
 
 
-            <h1 class="font-black text-4xl dark:text-amber-200">
-                لیست محصولات
-            </h1>
+        <h1 class="font-black text-4xl dark:text-amber-200">
+            لیست محصولات
+        </h1>
+        <main class="h-full pb-16 overflow-y-auto p-50  pt-10">
             <div class=" p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
                 @foreach ($products as $product)
                     <div
